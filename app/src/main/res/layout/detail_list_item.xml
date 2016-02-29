@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.linkcreators.listviewjson.listview.Pull2RefreshListView
+            android:id="@+id/plv_status_detail"
+            style="@style/ListViewLineDivider" >
+        </com.linkcreators.listviewjson.listview.Pull2RefreshListView>
+
+        <include
+            android:id="@+id/status_detail_tab"
+            layout="@layout/status_detail_tab"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/status_detail_control_bar"
+        layout="@layout/include_status_control_bar" />
+
+</LinearLayout>
